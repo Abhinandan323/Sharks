@@ -1,0 +1,97 @@
+body{
+    background-color:#000b11;
+}
+/*-------------------------------------------top image------------------------------------*/
+
+.imagess{
+    width: 100%;
+}
+
+.mySlides{
+    width: 100%;
+    height: 650px;
+}
+.b{
+    border: 2px solid black;
+    margin-top:15px;
+}
+
+/*-------------------------------------------blogs-----------------------------------------*/
+
+.blog1,.blog2,.blog3{
+    margin-top: 60px;
+    height: 300px;
+    width: 250px;
+    border: 5px solid #123C69;
+}
+.blog1{
+    margin-left: 90px;
+}
+.blog2{
+    margin-left: 630px;
+    margin-top: -300px;
+}
+.blog3{
+    margin-left: 1150px;
+    margin-top: -300px;
+}
+.blog1,.blog2,.blog3{
+    border-radius: 10%;
+}
+.blogimg{
+    height: 300px;
+    width: 250px;
+    border-radius: 10%;
+}
+.text {
+    background-color: #123C69;
+    color: lavenderblush;
+    font-size: 20px;
+    padding: 16px 32px;
+    border-radius: 10%;
+    text-align: center;
+    border-bottom: 3px solid red;
+}
+.mid {
+    opacity: 1;
+    top: 100%;
+    left: 0%;
+    margin-top: 20px;
+    width: 250px;
+}
+.blog{
+    height: 600px;
+    margin-bottom: 20px;
+}
+.c{
+    border: 2px solid black;
+}
+input[type=button]{
+    font-size: 32px;
+    width: 15%;
+    height: 10%;
+    background-color: #28598d;
+    color:white;
+    padding: 10px 10px;
+}
+input[type=email]{
+    font-size: 35px;
+    /*width: 20%;*/
+    height: 10%;
+    width:600px;
+    color: black;
+    padding: 10px 10px;
+}
+.button{
+    margin-top: 25px;
+}
+h2{
+    color: white;
+    font-size: 50px;
+    letter-spacing: 8px;
+    text-shadow: 5px 5px 5px black;
+}
+input[type=button]:hover{
+    background-color: red;
+    cursor: pointer;
+}
