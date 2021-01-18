@@ -1,0 +1,545 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<title>Sharks.shopping</title>
+
+<style>
+
+
+.nav_bar{
+	width:100%;
+	height:50px;
+	background-color: palevioletred;
+	top: 0px;
+	border-bottom: 3px solid grey;
+}
+#logo{
+	height:46px;
+	opacity:1;
+	margin-left: 10px
+}
+.search_box{
+	display: inline-flex;
+	width: 60%;
+}
+#search{
+	width: 40%;
+	height:35px;
+	border-radius:25px; 
+	margin-top:7px;
+	margin-left:30px;
+	border:1px solid grey !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-top-right-radius:0 !important;
+	border-bottom-right-radius: 0 !important;
+	box-shadow: none !important;
+	/*display: inline-flex !important;*/
+}
+.input-group-text
+{
+	
+	background: lavender !important;
+	border:1px solid grey !important;
+	margin:7px 10px 10px 0 !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-top-right-radius:20px !important;
+	border-bottom-right-radius: 20px !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	height: 35px;
+}
+.menu-bar{
+	width:350px;
+	height: 57px;
+	float: right;
+	
+}
+.menu-bar ul{
+	display: inline-flex;
+	float: right;
+}
+.menu-bar ul li
+{
+	border-left: 2px solid black;
+	list-style-type: none;
+	padding: 10px 20px;
+	height: 46px;
+	text-align: center;
+	background: palevioletred;
+	cursor: pointer; 
+}
+.menu-bar ul li a
+{
+	font-size: 16px;
+	font-weight: bold;
+	color:  lavenderblush ;
+	text-decoration: none;
+}
+.fa-shopping-cart
+{
+	margin-right: 5px;
+}
+.s{
+	margin-left: 180px;
+	font-size: 35px;
+	color: white;
+	font-family: fantasy;
+	letter-spacing: 6px;
+	text-shadow: 2px 5px black;
+}
+
+
+
+.img-jmbo{ 
+  background-image:url("https://images.unsplash.com/photo-1502759683299-cdcd6974244f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-size:100% 100%
+}
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+.thk{ text-align: center;
+	font-size: 50px;
+	color: palevioletred;
+	text-shadow: 2px 2px grey;
+}
+.footer{
+	/*margin-top: 50%;*/
+	background-color: black;
+	color: white;
+	/*text-align: center;*/
+    padding:25px 0px; 
+	overflow: hidden;
+	background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.footer h1{
+	font-size: 15px;
+	margin: 25px 0px;
+}
+.footer p{
+	font-size: 12px;
+}
+
+hr
+{
+	margin-top:10px;
+	background-color: black;
+}
+
+.footer .row .fa
+{
+	padding-right: 20px;
+	font-size:15px;
+}
+.footer-image img{
+	width:150px;
+}
+div .row:nth-child(1){
+  width: 300%;
+}
+p:hover{
+	color: palevioletred;
+}
+
+
+
+button{
+            background-color: palevioletred;
+            border:none;
+            color: white;
+        }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+.signupbtn,.cancelbtn {
+  background-color: palevioletred;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.signupbtn:hover{
+    background-color: limegreen;
+}
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: -50px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: white;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    margin-left: 1150px;
+    margin-top: 1px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  
+	<div class="nav_bar">
+		<div class="search_box">
+			<a href="homepage.html"><image src="https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif" id="logo"></image></a>
+
+			<a class="s" href="homepage.html">
+				SHARKS
+			</a>
+		</div>
+		
+		<div class="menu-bar">
+			<ul>
+				<li><a href="add to cart.html"><i class="fa fa-shopping-cart"></i>cart</a></li>
+				<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="material-icons"> person</i></button></li>
+                <li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i class="material-icons"> person</i></button></li>
+			
+			</ul>
+		</div>
+	</div>
+<!-------------------------------------------------------signin/login----------------------------------------------------------------------------------->
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content" action="/action_page.php" target="_self">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script-->
+<div id="id02" class="modal">
+  
+    <form class="modal-content" action="/action_page.php" target="_self">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <div class="container">
+        <h1>Log In</h1>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+  
+        <!--label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required-->
+        
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+        <div class="clearfix">
+          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Log In</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <section>
+    <div class="jumbotron img-jmbo" >
+      <div class="container-fluid">
+        <h1 style="color: palevioletred;">Welcome Everyone<h1>
+          <p  style="color: palevioletred;">Celebrate Independence Day With Shark Week Sale!!!<br>50%-70%Off<p>
+            <button class="btn btn-dark" style="color: palevioletred">Order Now</button>
+            <br><br>
+            <marquee direction="left"   >
+
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61ers6OzvUL._SL1024_.jpg.jpg" width="200" height="200" alt="Natural" >
+              <img src="https://i.gadgets360cdn.com/products/cameras/large/1548234733_832_canon_eos-5ds-50-6mp-dslr-camera.jpg?downsize=*:420&output-quality=80" width="200" height="200" alt="Natural" >
+              <img src="https://in.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5c5abe45/JBL_T460BT_HERO_BLACK-1605x1605.jpg?sw=556&sh=680&sm=fit&sfrm=png" width="200" height="200" alt="Natural" >
+              <img src="https://staticimg.titan.co.in/Titan/Catalog/2639SL03_1.jpg?pView=pdp" width="200" height="200" alt="Natural" >
+              <img src="https://rukminim1.flixcart.com/image/416/416/mask-respirator/e/h/2/8210v-3m-original-imaezqhgtzyymfch.jpeg?q=70" width="200" height="200" alt="Natural" >
+              <img src="https://www.lg.com/in/images/tvs/md05994162/gallery/01_1600x1062.jpg" width="200" height="200" alt="Natural" >
+              <img src="https://4.imimg.com/data4/PI/XT/MY-11905953/ray-ban-sunglasses-500x500.jpg" width="200" height="200" alt="Natural" >
+              <img src="https://cdn.metrobrands.com/mochi/media/images/products/14/14-143M11.jpg?d=1000x1000.jpg" width="200" height="200" alt="Natural" >
+              <img src="https://www.lg.com/in/images/refrigerators/md06235936/gallery/GC-F297CLAL-Refrigerators-Front-View-DZ-01.jpg" width="200" height="200" alt="Natural" >
+              <img src="https://images-na.ssl-images-amazon.com/images/I/61jgfLBydjL._SL1024_.jpg" width="200" height="200" alt="Natural" >
+              <img src="https://in.jbl.com/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwca66a096/C100TWS_1605x1605-Black-2.png" width="200" height="200" alt="Natural" >
+
+            </marquee>
+          </div>
+        </div>
+      </section>
+
+<div style="background-color:palevioletred;height: 50px;"></div>
+  <section class="portforlio bg-light">
+
+    <div class="container text-center">
+      <h2 class="text" style="color: palevioletred;text-shadow: 2px 2px black;">PRODUCTS</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-inline m-auto">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" class="card-img img-fluid">
+            <div class="card-body bg-secondary">
+              <h2 >Phone</h2>
+              <a href="iphone11.html" class="btn btn-light" ">BUY</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-inline m-auto">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1583312572805-32ece488eb6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" class="card-img img-fluid">
+            <div class="card-body bg-secondary">
+              <h2 >Watches</h2>
+              <a href="watches1.html" class="btn btn-light" >BUY</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-inline m-auto">
+            <div class="card">
+                  <img src="https://images.unsplash.com/photo-1542144761-5b4eb34ac97d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80.jpg" class="card-img img-fluid">
+                      <div class="card-body bg-secondary">
+                              <h2 >Camera</h2>
+                                    <a href="camera1.html" class="btn btn-light" >BUY</a>
+                      </div>
+              </div>
+        </div>
+        </div>
+
+<br>
+
+<div class="row">
+
+  <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-inline m-auto">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="card-img img-fluid">
+
+      <div class="card-body bg-secondary">
+
+        <h2 >Electronics</h2>
+
+        <a href="led1.html" class="btn btn-light" >BUY</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-inline m-auto">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1584634731339-252c581abfc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1508&q=80"  height="200" class="card-img img-fluid">
+
+      <div class="card-body bg-secondary">
+
+        <h2 >Masks</h2>
+
+        <a href="maks.1.html" class="btn btn-light" >BUY</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-12 col-10 d-inline m-auto">
+
+    <div class="card">
+
+      <img src="https://images.unsplash.com/photo-1545454675-3531b543be5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="card-img img-fluid">
+
+      <div class="card-body bg-secondary">
+
+        <h2 >speaker</h2>
+
+        <a href="speaker1.html" class="btn btn-light">BUY</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<br>
+
+</div>
+
+</section>
+
+<div style="background-color:palevioletred;height: 50px;"></div>
+<section>
+  <div class="footer">
+    <div class="thk">
+      Thanks for Using Sharks
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-1">
+          <h1>Useful Links</h1>
+          <p>Privacy Policy</p>
+          <p>Terms of Use</p>
+          <p>Return Policy</p>
+          <p>Discount Coupons</p>
+        </div>
+        <div class="col-1">
+          <h1>Company</h1>
+          <p>About Us</p>
+          <p>Contact Us</p>
+          <p>Career</p>
+          <p>Affilate</p>
+                  </div>
+        <div class="col-1">
+          <h1>Follow Us On</h1>
+          <p><i class="fa fa-facebook-official"></i>Facebook</p>
+          <p><i class="fa fa-youtube-play"></i>Youtube</p>
+          <p><i class="fa fa-linkedin"></i>Linkedin</p>
+          <p><i class="fa fa-twitter"></i>Twitter</p>	
+        </div>
+        <div class="col-1 footer-image">
+          <h1>Download App</h1>
+          <a href="">></a>
+        </div>
+      </div>
+      <hr>
+  </div>
+</div>
+  </section>
+
+</body>
+</html>
