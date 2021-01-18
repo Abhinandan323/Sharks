@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <title> movie/song/item</title>
+
+    
+<script>
+    function calculatePrice(myform){
+
+//Get selected data  
+var elt = document.getElementById("memoryItem");
+var memory = elt.options[elt.selectedIndex].value;
+  
+var elt = document.getElementById("hddItem");
+var hdd = elt.options[elt.selectedIndex].value;
+  
+var elt = document.getElementById("networkItem");
+var network = elt.options[elt.selectedIndex].value;
+  
+//convert data to integers
+memory = parseInt(memory);
+hdd = parseInt(hdd);
+network = parseInt(network);
+  
+//calculate total value  
+var total = memory+hdd+network; 
+  
+//print value to  PicExtPrice 
+document.getElementById("PicExtPrice").value=total;
+
+}
+</script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+     <style>
+          body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=button] {
+  background-color: royalblue;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+        label{
+            color: white;
+font-size:30px;
+        }
+input[type=submit]:hover {
+  background-color: yellow;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: rgb(219,112,147);
+  padding: 20px;
+}
+        a:hover{
+            color:yellow;
+        }
+
+        body{
+            background-color: white;
+        }
+
+
+        /*navigation bar*/
+
+        .nav_bar{
+	    width:100%;
+	    height:50px;
+	    background-color:  rgb(219,112,147);
+	    top: 0px;
+	    border-bottom: 3px solid grey;
+        }
+
+        #logo{
+	        height:45px;
+	        opacity:1;
+	        margin-left: 10px;
+        }
+
+        .search_box{
+	        display: inline-flex;
+	        width: 60%;
+        }
+
+        #search{
+	        width: 40%;
+	        height:35px;
+	        border-radius:25px; 
+	        margin-top:7px;
+	        margin-left:30px;
+	        border:1px solid grey !important;
+	        border-top-left-radius: 20px !important;
+	        border-bottom-left-radius: 20px !important;
+	        border-top-right-radius:0 !important;
+	        border-bottom-right-radius: 0 !important;
+	        box-shadow: none !important;
+	        /*display: inline-flex !important;*/
+        }
+
+        .input-group-text{
+	        background: lavender !important;
+	        border:1px solid grey !important;
+	        margin:7px 10px 10px 0 !important;
+	        border-top-left-radius: 0 !important;
+	        border-bottom-left-radius: 0 !important;
+	        border-top-right-radius:20px !important;
+	        border-bottom-right-radius: 20px !important;
+	        box-shadow: none !important;
+	        cursor: pointer;
+	        height: 35px;
+        }
+
+        .menu-bar{
+	        width:350px;
+	        height: 57px;
+	        float: right;
+        }
+
+        .menu-bar ul{
+	        display: inline-flex;
+	        float: right;
+        }
+
+        .menu-bar ul li{
+        	border-left: 2px solid black;
+	        list-style-type: none;
+	        padding: 10px 20px;
+	        height: 46px;
+	        text-align: center;
+    background-color:  rgb(219,112,147);
+	   	
+          cursor: pointer; 
+        }
+
+        .menu-bar ul li a{
+        	font-size: 16px;
+	        font-weight: bold;
+	        color:  lavenderblush ;
+	        text-decoration: none;
+        }
+
+        .fa-shopping-cart{
+	        margin-right: 5px;
+        }
+
+   .f2{
+       background-color:  rgb(219,112,147);
+}
+
+        .s{
+	        margin-left: 180px;
+	        font-size: 35px;
+	        color: black;
+	        font-family: fantasy;
+	        letter-spacing: 6px;
+	       }
+
+
+        /*body*/
+
+        .hed{
+         background-color:  rgb(219,112,147);
+            height: 60px;
+            color: black;
+            text-shadow: 2px 2px black;
+        }
+
+        .hed p{
+            font-size: 51px;
+        }
+
+        .des{ 
+   text-size:5px;
+            text-shadow:  black;
+            color: black;
+           
+          font-size: 18px;
+            padding-left: 50px;
+        }
+
+        .button{
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+    background-color:  rgb(219,112,147);
+          
+        }
+
+        .button:hover{
+            background-color: black;
+            color: rgb(42, 227, 240);
+        }
+
+
+        /*more*/
+
+        .mor{
+            background-color: black;
+            border-bottom: 10px solid rgb(219,112,147);
+            
+        }
+
+        .mor h3{
+            width: 110px;
+            color: rgb(219,112,147);
+            border-left: 5px solid rgb(219,112,147);
+            background-color: black;
+        }
+
+        .mor img{
+            border: 2px solid rgb(219,112,147);
+            border-radius: 5px;
+            height: 160px;
+            width: 190px;
+            margin-right: 50px;
+        }
+
+
+        /*feedback*/
+
+        
+
+        /* Footer */
+
+     h4{
+      color: black;
+      font-size: 50px;
+      text-shadow: 2px 2px black;
+}
+  
+ .thk{ 
+            text-align: center;
+	        font-size: 50px;
+	        color: white;
+	        text-shadow: 2px 2px palevioletred;
+        }
+
+        .footer{
+	        /*margin-top: 50%;*/
+	         background-color:  black;
+	        color:white;
+	        /*text-align: center;*/
+            padding:25px 0px; 
+	        overflow: hidden;
+	        background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+	        background-repeat: no-repeat;
+	        background-position: center;
+        }
+
+        .footer h1{
+	        font-size: 15px;
+	        margin: 25px 0px;
+        }
+
+        .footer p{
+                            
+	        font-size: 20px;
+        }
+
+        hr{
+	        margin-top:10px;
+	        background-color: black;
+        }
+
+        .footer .row .fa{
+	        padding-right: 20px;
+	        font-size:15px;
+        }
+
+        .footer-image img{
+	        width:150px;
+        }
+
+        .row{
+            width: 350%;
+        }
+
+        p:hover{
+	        color: rgb(42,134,240);
+        }
+
+    </style>
+    <body>
+
+        <!----Navigation bar-->
+        <div class="nav_bar">
+            <div class="search_box">
+                <image src="https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif" id="logo"></image>
+    
+                <a class="s" href="">
+                    SHARKS SHOPPING.
+                </a>
+            </div>
+            
+           <div class="menu-bar">
+                <ul>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart text-dark"></i></a></li>
+                    <li><a href="#"><div class="ab text-dark">BEST SELLERS</div></a></li>
+                    <li><a href=""><i class="material-icons text-dark"> person</i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Slideshow-->
+        <div>
+            <br><br><br>
+            <center>
+        <iframe width="440" height="446" src="https://www.youtube.com/embed/XfwGIkRUUSg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br><br><br>
+            </center>
+        </div>
+
+        <!--Name and discripton-->
+        <div style="border-bottom: 10px solid palevioletred">
+            <div class="hed">
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3M 3M8210VFacemask 8210V </p>
+            </div>
+            <div class="des">
+                <p><br><br><br>
+                  
+                    Brand : 3M <br><br>
+                Model Number : 8210V<br><br>
+                    
+                   Color : White  <br><br>
+               Straps : Elastic <br><br>
+                   
+                </p>
+                <center>
+                    
+     <FORM Name="myform">
+
+        <SELECT NAME="memoryItem" onChange="calculatePrice()" id="memoryItem">
+          <OPTION value="0">No. of items</OPTION>
+          <OPTION value="100">1</OPTION>
+          <OPTION value="500">5</OPTION>
+          <OPTION value="900">10</OPTION>
+          <OPTION value="4800">50</OPTION>
+          <OPTION value="9600">100</OPTION>
+          <OPTION value="90000">1000</OPTION>
+        </SELECT>
+        </FORM>
+    
+        The new calculated price:<INPUT type="text" id="PicExtPrice" Size=8>
+        <br>
+                    <a href="payment.html">
+                        <button  class="button" type="button">
+                            BUY
+                        </button>
+                    </a>
+                </center>
+            </div>
+        </div>
+
+        <!--more items page-->
+        <div class="mor">
+            <br>
+            <h3>  &nbsp;&nbsp;More :-</h3>
+            <marquee>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/image/416/416/mask-respirator/e/h/2/8210v-3m-original-imaezqhgtzyymfch.jpeg?q=70">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/image/416/416/mask-respirator/e/h/2/8210v-3m-original-imaezqhgkwyrezrb.jpeg?q=70">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/image/416/416/mask-respirator/e/h/2/8210v-3m-original-imaezqhj5hgxgm5h.jpeg?q=70">
+                </a>
+                <a href="">
+                    <img src="https://rukminim1.flixcart.com/image/416/416/mask-respirator/e/h/2/8210v-3m-original-imaezqhjcpzbzwch.jpeg?q=70">
+                </a>
+          
+               
+            </marquee>
+            <br><br>
+        </div>
+  <div class="feedback text-center ">
+<h4>FEEDBACK FORM:</h4><br>
+<label for="feed">FEEDBACK:-</label>
+<input type="text" id="feed"  name="feed">
+<a href=""><button  class="button" type="button">SUBMIT</button> </a><br>
+<h4>For More Types:- 
+   <div class="f2">
+  <select id="BRANDS" name="BRAND" >
+      <option value="N95">N95</option>
+     <option value="SURGICAL MASK">SURGICAL MASK</option>
+      <option value="SPONGE MASK"> SPONGE MASK</option>
+                      </select> 
+</div>
+</h4>
+
+</div>
+
+
+        <!--footer-->
+        <div class="footer">
+  
+            <div class="thk">
+                Thanks for Using Sharks
+            </div>
+            <div class="container" style="background-color: black;">
+                <div class="row">
+                    <div class="col-1">
+                        <h1>Useful Links</h1>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Use</p>
+                        <p>Return Policy</p>
+                        <p>Discount Coupons</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Company</h1>
+                        <p>About Us</p>
+                        <p>Contact Us</p>
+                        <p>Career</p>
+                        <p>Affilate</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Follow Us On</h1>
+                        <p><i class="fa fa-facebook-official"></i>Facebook</p>
+                        <p><i class="fa fa-youtube-play"></i>Youtube</p>
+                        <p><i class="fa fa-linkedin"></i>Linkedin</p>
+                        <p><i class="fa fa-twitter"></i>Twitter</p>	
+                    </div>
+                    <div class="col-1 footer-image">
+                        <h1>Download App</h1>
+                        <p>
+                            <a href="https://play.google.com/store/apps?hl=en_IN"><i class="fa fa-play"></i></a>
+                        </p>
+                        <p>
+                            <a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <p><center>
+                    <i class="fa fa-copyright"></i> 2020 Sharks Co.
+                </center></p>
+        </div>
+    </div>
+    </body>
+</html>
