@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <title>Ford Vs Ferrari</title>
+
+    
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <style>
+          body {font-family: Arial, Helvetica, sans-serif;}
+*{box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=button] {
+  background-color: royalblue;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+        label{
+            color: royalblue;
+        }
+input[type=submit]:hover {
+  background-color: yellow;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+}
+        a:hover{
+            color:yellow;
+        }
+
+        body{
+            background-color: black;
+        }
+
+
+        /*navigation bar*/
+
+        .nav_bar{
+	    width:100%;
+	    height:50px;
+	    background-color: rgb(42, 227, 240);
+	    top: 0px;
+	    border-bottom: 3px solid grey;
+        }
+
+        #logo{
+	        height:46px;
+	        opacity:1;
+	        margin-left: 10px;
+        }
+
+        .search_box{
+	        display: inline-flex;
+	        width: 60%;
+        }
+
+        #search{
+	        width: 40%;
+	        height:35px;
+	        border-radius:25px; 
+	        margin-top:7px;
+	        margin-left:30px;
+	        border:1px solid grey !important;
+	        border-top-left-radius: 20px !important;
+	        border-bottom-left-radius: 20px !important;
+	        border-top-right-radius:0 !important;
+	        border-bottom-right-radius: 0 !important;
+	        box-shadow: none !important;
+	        /*display: inline-flex !important;*/
+        }
+
+        .input-group-text{
+	        background: lavender !important;
+	        border:1px solid grey !important;
+	        margin:7px 10px 10px 0 !important;
+	        border-top-left-radius: 0 !important;
+	        border-bottom-left-radius: 0 !important;
+	        border-top-right-radius:20px !important;
+	        border-bottom-right-radius: 20px !important;
+	        box-shadow: none !important;
+	        cursor: pointer;
+	        height: 35px;
+        }
+
+        .menu-bar{
+	        width:350px;
+	        height: 57px;
+	        float: right;
+        }
+
+        .menu-bar ul{
+	        display: inline-flex;
+	        float: right;
+        }
+
+        .menu-bar ul li{
+        	border-left: 2px solid black;
+	        list-style-type: none;
+	        padding: 10px 20px;
+	        height: 46px;
+	        text-align: center;
+	        background: rgb(42, 227, 240);
+	        cursor: pointer; 
+        }
+
+        .menu-bar ul li a{
+        	font-size: 16px;
+	        font-weight: bold;
+	        color:  lavenderblush ;
+	        text-decoration: none;
+        }
+
+        .fa-shopping-cart{
+	        margin-right: 5px;
+        }
+
+        .s{
+	        margin-left: 180px;
+	        font-size: 35px;
+	        color: white;
+	        font-family: fantasy;
+	        letter-spacing: 6px;
+	        text-shadow: 2px 5px black;
+        }
+
+
+        /*body*/
+
+        .hed{
+            background-color: rgb(42, 227, 240);
+            height: 60px;
+            color: white;
+            text-shadow: 2px 2px black;
+        }
+
+        .hed p{
+            font-size: 51px;
+        }
+
+        .des{ 
+            text-shadow: 2px 2px black;
+            color: rgb(42, 227, 240);
+            font-size: 18px;
+            padding-left: 50px;
+        }
+
+        .button{
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: rgb(42, 227, 240);
+        }
+
+        .button:hover{
+            background-color: black;
+            color: rgb(42, 227, 240);
+        }
+
+
+        /*more*/
+
+        .mor{
+            background-color: rgb(48, 48, 48);
+            border-bottom: 10px solid rgb(42, 227, 240);
+            
+        }
+
+        .mor h3{
+            width: 110px;
+            color: rgb(42, 227, 240);
+            border-left: 5px solid rgb(42, 227, 240);
+            background-color: black;
+        }
+
+        .mor img{
+            border: 2px solid rgb(42, 227, 240);
+            border-radius: 5px;
+            height: 160px;
+            width: 190px;
+            margin-right: 50px;
+        }
+
+
+        /*feedback*/
+
+        
+
+        /* Footer */
+
+        .thk{ 
+            text-align: center;
+	        font-size: 50px;
+	        color: white;
+	        text-shadow: 2px 2px rgb(42, 227, 240);
+        }
+
+        .footer{
+	        /*margin-top: 50%;*/
+	        background-color: black;
+	        color: white;
+	        /*text-align: center;*/
+            padding:25px 0px; 
+	        overflow: hidden;
+	        background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+	        background-repeat: no-repeat;
+	        background-position: center;
+        }
+
+        .footer h1{
+	        font-size: 15px;
+	        margin: 25px 0px;
+        }
+
+        .footer p{
+	        font-size: 12px;
+        }
+
+        hr{
+	        margin-top:10px;
+	        background-color: white;
+        }
+
+        .footer .row .fa{
+	        padding-right: 20px;
+	        font-size:15px;
+        }
+
+        .footer-image img{
+	        width:150px;
+        }
+
+        .row{
+            width: 350%;
+        }
+
+        p:hover{
+	        color: rgb(42,134,240);
+        }
+
+    </style>
+
+    <body>
+
+        <!----Navigation bar-->
+        <div class="nav_bar">
+            <div class="search_box">
+                <image src="https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif" id="logo"></image>
+    
+                <a class="s" href="">
+                    SHARKS ENT.
+                </a>
+            </div>
+            
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href=""><i class="material-icons"> person</i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Slideshow-->
+        <div>
+            <br><br><br>
+            <center>
+       <iframe id="iframe-embed" width="100%" height="900" scrolling="no" frameborder="0" src="https://player.123moviesfree.ltd/player/movies.php?id=tt1950186" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+            <br><br><br>
+            </center>
+        </div>
+
+        <!--Name and discripton-->
+        <div style="border-bottom: 10px solid rgb(42,227,240);">
+            <div class="hed">
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ford Vs Ferrari</p>
+            </div>
+            <div class="des">
+                <p><br><br><br>
+                   Watch Ford v Ferrari (2019) 123movies online for free. Ford v Ferrari (2019) Movies123: American car designer Carroll Shelby and the British-born driver Ken Miles work together to battle corporate interference, the laws of physics, and their own personal demons to build a revolutionary race car for Ford Motor Company and take on the dominating race cars of Enzo Ferrari at the 24 Hours of Le Mans in France in 1966.
+ <br>Genre: Drama, Action
+ <br>
+Actor: Christian Bale, Matt Damon, Jon Bernthal, Caitriona Balfe, Josh Lucas, Noah Jupe, Tracy Letts, Remo Girone, Ray McKinnon, J.J. Feild
+ <br>
+Director: James Mangold
+ <br>
+Country: France, United States of America
+ <br>
+Quality: DVD
+ <br>
+Release: 2019
+ <br>
+Runtime: 152 min
+ <br>
+IMDb: 7.8
+ <br>
+ 
+                    <br>
+                </p>
+                <center> 
+                    <a href="https://www.uwatchfree.ai/download.php?movie=thor-ragnarok-2017-full-movie">
+                        <button  class="button" type="button">
+                            Download
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button  class="button" type="button">
+                            Watch
+                        </button>
+                    </a>
+                </center>
+            </div>
+        </div>
+
+        <!--more items page-->
+        <div class="mor">
+            <br>
+            <h3>  &nbsp;&nbsp;More :-</h3>
+            <marquee>
+                <a href="darkknight.html">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/695/617/246/movies-bane-batman-the-dark-knight-rises-wallpaper-preview.jpg">
+                </a>
+                <a href="jumanji.html">
+                    <img src="https://flxt.tmsimg.com/assets/p15446613_v_h10_af.jpg">
+                </a>
+                <a href="blade.html">
+                    <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fscottmendelson%2Ffiles%2F2017%2F09%2Ftumblr_static_26osk19e9qck84sgcwogsw88w-1200x675.jpg">
+                </a>
+                <a href="interstellar.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXN-xLC5bFtgfG6b7Spk0Tl09ZpQ9RiWGfMA&usqp=CAU">
+                </a>
+                <a href="johnwick.html">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/91hFxTjgTSL._SL1500_.jpg">
+                </a>
+                <a href="ford.html">
+                    <img src="https://drraa3ej68s2c.cloudfront.net/wp-content/uploads/2020/01/06114112/48883b4cc41dccf1a54caa5ace0431640f71cc958b53a6abcada7c95c425ef5d-1024x1024.jpg">
+                </a>
+            </marquee>
+            <br><br>
+        </div>
+
+        <!--Feedback form-->
+        <div>
+<h3 style="color:royalblue;text-align: center">Feedback Form</h3>
+                <center><form >
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<br>
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+<br>
+    <label for="country">Country</label>
+<br>    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+                     <option value="india">INDIA</option>
+    </select>
+<br>
+    <label for="subject">Enter Your Feedback</label>
+   <br> <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;width: 300px;"></textarea>
+<br>
+    <input type="button" value="Submit" onclick="feed()">
+                    <p id="out" style="color:yellow;"></p>
+                    </form></center>
+        </div>
+<script>
+    function feed(){
+        document.getElementById("out").innerHTML="Submitted Successfully";
+    }
+        </script>>
+        <!--footer-->
+        <div class="footer">
+            <div class="thk">
+                Thanks for Using Sharks
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <h1>Useful Links</h1>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Use</p>
+                        <p>Return Policy</p>
+                        <p>Discount Coupons</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Company</h1>
+                        <p>About Us</p>
+                        <p>Contact Us</p>
+                        <p>Career</p>
+                        <p>Affilate</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Follow Us On</h1>
+                        <p><i class="fa fa-facebook-official"></i>Facebook</p>
+                        <p><i class="fa fa-youtube-play"></i>Youtube</p>
+                        <p><i class="fa fa-linkedin"></i>Linkedin</p>
+                        <p><i class="fa fa-twitter"></i>Twitter</p>	
+                    </div>
+                    <div class="col-1 footer-image">
+                        <h1>Download App</h1>
+                        <p>
+                            <a href="https://play.google.com/store/apps?hl=en_IN"><i class="fa fa-play"></i></a>
+                        </p>
+                        <p>
+                            <a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <p><center>
+                    <i class="fa fa-copyright"></i> 2020 Sharks Co.
+                </center></p>
+        </div>
+    </div>
+    </body>
+</html>
