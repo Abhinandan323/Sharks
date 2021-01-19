@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sharks</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="main_1_js.js"></script>
+	
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        /*----------------------------navigation bar----------------------------------*/
+
+.s{
+        margin-left: 180px;
+	font-size: 35px;
+	color: white;
+	font-family: fantasy;
+	letter-spacing: 6px;
+	text-shadow: 2px 5px black;  
+        }
+
+.nav_bar{
+	width:100%;
+	height:50px;
+	background-color:dodgerblue;
+	top: 0px;
+	border-bottom: 3px solid grey;
+	margin-bottom: 20px
+}
+#logo{
+	height:46px;
+	opacity:1;
+	margin-left: 10px
+}
+.search_box{
+	display: inline-flex;
+	width: 60%;
+}
+#search{
+	width: 50%;
+	height:35px;
+	border-radius:25px; 
+	margin-top:7px;
+	margin-left:30px;
+	border:1px solid grey !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-top-right-radius:0 !important;
+	border-bottom-right-radius: 0 !important;
+	box-shadow: none !important;
+	/*display: inline-flex !important;*/
+}
+
+.thk{ text-align: center;
+	font-size: 50px;
+	color: white;
+	text-shadow: 2px 2px grey;
+}
+.input-group-text
+{
+	
+	background: lavender !important;
+	border:1px solid grey !important;
+	margin:7px 10px 10px 0 !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-top-right-radius:20px !important;
+	border-bottom-right-radius: 20px !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	height: 35px;
+}
+.menu-bar{
+	width:40%;
+	height: 57px;
+	float: right;
+	
+}
+button{
+	display: inline-flex;
+	float: right;
+}
+button
+{
+	border-left: 1px solid grey;
+	list-style-type: none;
+	padding: 10px 35px;
+	height: 46px;
+	text-align: center;
+	background: lavender;
+	cursor: pointer; 
+}
+.menu-bar ul li a
+{
+	font-size: 16px;
+	font-weight: bold;
+	color:  dodgerblue;
+	text-decoration: none;
+}
+.fa-shopping-cart
+{
+	margin-right: 5px;
+}
+
+/*-------------------------------------image slideshow-------------------------------------*/
+
+.mySlides{
+    display: none;
+    width: 60%;
+    height: 400px;
+    margin-left: 5px;
+}
+.imagess{
+    width: 100%;
+    height:400px;
+    background-color: Black;
+}
+
+/*------------------------------------special places----------------------------------------*/
+
+        .gap{
+            background-color: royalblue;
+            width: 100%;
+            height: 50px;
+        }
+        
+        .rel1{
+            display: inline-block;
+        }
+        .rel2{
+            margin-top: 30px;
+            display: inline-block;
+        }
+        .up{
+            margin-top: -10px;
+            background-color: royalblue;
+            width:100px;
+            border-radius: 10px;
+        }
+        .photo{
+            width:300px;
+            height: 300px;
+        }
+        .f1{
+            background-color: royalblue;
+            position: relative;
+            border-radius:10px;
+            right:50px;
+            font-size: 25px;
+            top: 140px;
+            margin-right: -10px;
+			opacity: 0.5;
+        }
+        .f1:hover{
+			opacity: 1;
+            background-color: yellow;
+        }
+        img{
+            border-radius:10px;
+            border:1px solid white;
+        }
+        .a1{
+            display: inline-block;
+        }
+        a{
+            color:black;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration:none;
+            color:red;
+        }
+        .photo:hover{
+            opacity: .6;
+        }
+/*-------------------------------------------image slider------------------------------------*/
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+.signupbtn,.cancelbtn {
+  background-color: rgb(48, 48, 48);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.signupbtn:hover{
+    background-color: limegreen;
+}
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: -50px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgb(42,227, 240);
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    margin-left: 1150px;
+    margin-top: 1px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+/*----------------------------------login---------------------------------------------------------*/
+
+.mbar{
+	margin-left:20px;
+}
+
+
+
+
+/*--------------------------------------------------footer----------------------------------*/
+
+
+.footer{
+	/*margin-top: 50%;*/
+	background-color: black;
+	color: white;
+	/*text-align: center;*/
+    padding:25px 0px; 
+    overflow: hidden;
+    background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.footer h1{
+	font-size: 15px;
+	margin: 25px 0px;
+}
+.footer p{
+	font-size: 12px;
+}
+
+hr
+{
+	margin-top:10px;
+	background-color: white;
+}
+
+.footer .row .fa
+{
+	padding-right: 20px;
+	font-size:15px;
+}
+.footer-image img{
+	width:150px;
+}
+.row{
+    width: 350%;
+    
+}
+      
+    </style>
+
+</head>
+<body style="background-color: black;" id="ar">
+
+	<!---------------------------------------------------------------header------------------------------------------------------>
+
+	<div class="nav_bar">
+		<div class="search_box">
+			<a href="homepage.html"><image src="logo.jpeg" id="logo"></image></a>
+
+			<input type="text" name="search" id="search">
+            
+			<span class="input-group-text"><i class="fa fa-search"></i></span>
+            <p class="s">
+				SHARKS
+			</p>
+		</div>
+		<div class="menu-bar">
+            <ul>
+				
+                <li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;border: 2px solid dodgerblue;background-color: dodgerblue;"><i class="material-icons"> person</i></button></li>
+			</ul>
+		</div>
+	</div>
+
+	<!----------------------------------------------------------------------------------------------------------------------------->
+
+	<div id="id02" class="modal">
+    
+		<form class="modal-content" action="/action_page.php" target="_self">
+		  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+		  <div class="container">
+			<h1>Log In</h1>
+			<hr>
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email" required>
+	  
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+	  
+			<!--label for="psw-repeat"><b>Repeat Password</b></label>
+			<input type="password" placeholder="Repeat Password" name="psw-repeat" required-->
+			
+			<label>
+			  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+			</label>
+			<div class="clearfix">
+			  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+			  <button type="submit" class="signupbtn">Log In</button>
+			</div>
+		  </div>
+		</form>
+	  </div>
+    <!----------------------------------------------------------image slideshow-------------------------------------------------------->
+
+    <div class="imagess">
+      <center>  <img class="mySlides" src="https://c4.wallpaperflare.com/wallpaper/695/617/246/movies-bane-batman-the-dark-knight-rises-wallpaper-preview.jpg">
+        <img class="mySlides" src="https://flxt.tmsimg.com/assets/p15446613_v_h10_af.jpg" >
+		<img class="mySlides" src="https://i2.wp.com/www.davidjonfuller.com/wp-content/uploads/2018/02/thor-ragnarok-poster.jpg">
+		<img class="mySlides" src="https://c4.wallpaperflare.com/wallpaper/200/741/271/movies-inception-wallpaper-preview.jpg">
+        <img class="mySlides" src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fscottmendelson%2Ffiles%2F2017%2F09%2Ftumblr_static_26osk19e9qck84sgcwogsw88w-1200x675.jpg"></center>
+	</div>
+	<script>
+		var myIndex = 0;
+		carousel();
+		
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+			x[i].style.display = "none";  
+		}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 3000); // Change image every 2 seconds
+		}
+	</script>
+
+	<!----------------------------------------------------------------------------------------------------------------------------->
+
+	<!------------------------------------------------------------special places------------------------------------------------------->
+	
+	<hr class="gap">
+	<h2 style="color: dodgerblue;border-left: 3px solid dodgerblue;width: 170px;background-color: rgb(48,48,48);">
+		&nbsp;&nbsp;Sci-fi
+	</h2>
+	<div class="mbar" >
+        <div class="rel1"><img src="https://i2.wp.com/www.davidjonfuller.com/wp-content/uploads/2018/02/thor-ragnarok-poster.jpg" class="photo"></div>
+        <div class="rel1 f1"><a href="Thor.html"><b>Thor Rangnarok</b></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
+        <div class="rel1"><img src="https://c4.wallpaperflare.com/wallpaper/695/617/246/movies-bane-batman-the-dark-knight-rises-wallpaper-preview.jpg" class="photo"></div>
+        <div class="rel1 f1"><a href="darkknight.html"><b>The Dark Knight</b></a></div>
+        <div class="rel1"><img src="https://flxt.tmsimg.com/assets/p15446613_v_h10_af.jpg" class="photo"></div>
+        <div class="rel1 f1"><a href="jumanji.html"><b>Jumanji :<br>The Next Level</b></a></div>
+        <div class="rel2"><img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fscottmendelson%2Ffiles%2F2017%2F09%2Ftumblr_static_26osk19e9qck84sgcwogsw88w-1200x675.jpg" class="photo"></div>
+        <div class="rel2 f1"><a href="blade.html"><b>Blade Runner 2049</b></a></div>
+         <div class="rel2"><img src="https://www.syfy.com/sites/syfy/files/styles/1170xauto/public/the_matrix_0.png" class="photo"></div>
+        <div class="rel2 f1"><a href="matrix.html"><b>The Matrix</b></a></div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <div class="rel2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXN-xLC5bFtgfG6b7Spk0Tl09ZpQ9RiWGfMA&usqp=CAU" class="photo"></div>
+        <div class="rel2 f1"><a href="interstellar.html"><b>Iterstellar </b></a></div>
+	</div>
+	<br><br><br>
+<h2 style="color: dodgerblue;border-left: 3px solid dodgerblue;width: 170px;background-color: rgb(48,48,48);">
+	&nbsp;&nbsp;Action
+</h2>
+	<div >
+        <div class="a1"><img src="https://i1.wp.com/tecake.com/wp-content/uploads/2020/05/Bad-Boys-for-Life-2020.jpg?fit=1920%2C1080&ssl=1" class="photo"></div>
+        <div class="a1 f1"><a href="bad.html"><b>Bad Boys For Life</b></a></div>
+         &nbsp;&nbsp;&nbsp;&nbsp;<div class="a1"><img src="https://images-na.ssl-images-amazon.com/images/I/91hFxTjgTSL._SL1500_.jpg" class="photo"></div>
+        <div class="a1 f1"><a href="johnwick.html"><b>John Wick</b></a></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="a1"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQcjheOnBb_WFU5yuYLnUYWjfr33KzdFx1PCNGVhgM4-89otmi9" class="photo"></div>
+        <div class="a1 f1"><a href="spectre.html"><b>Spectre</b></a></div>
+	</div>
+	<br><br><br>
+	<h2 style="color: dodgerblue;border-left: 3px solid dodgerblue;width: 450px;background-color: rgb(48,48,48);">
+		&nbsp;&nbsp;OSCAR NOMINEES 2020
+</h2>
+<div>
+    <div class="a1"><img src="https://drraa3ej68s2c.cloudfront.net/wp-content/uploads/2020/01/06114112/48883b4cc41dccf1a54caa5ace0431640f71cc958b53a6abcada7c95c425ef5d-1024x1024.jpg" class="photo"></div>
+    <div class="a1 f1"><a href="ford.html"><b>Ford vs Ferrari</b></a></div>s
+    <div class="a1"><img src="https://drraa3ej68s2c.cloudfront.net/wp-content/uploads/2020/01/06114342/97637aa28478d705b99268b0d1e4d4791f5949df77c6d4fc43d7333968334fde-1024x1024.jpg" class="photo"></div>
+    <div class="a1 f1"><a href="once.html"><b>ONCE UPON A TIME<br>...IN HOLLYWOOD</b></a></div>
+    <div class="a1"><img src="https://drraa3ej68s2c.cloudfront.net/wp-content/uploads/2020/01/06114158/196c440af625ba83292242f2d6d3ee310c024cacb7d05610531033b1f1bf1b2c-1024x1024.jpg" class="photo"></div>
+    <div class="a1 f1"><a href="joker.html"><b>JOKER</b></a></div>
+    </div>s
+	<hr class="gap">
+
+	<!---------------------------------------------------------------------------------------------------------------------------------------->
+
+	<!--------------------------------------------------------------image slider--------------------------------------------------------------->
+
+	
+
+
+
+
+
+
+
+	<!------------------------------------------------------------------------------------------------------------------------------------------->
+
+	<!----------------------------------------------------------------footer---------------------------------------------------------------------->
+
+	<section>
+		<div class="footer">
+			<div class="thk">
+				Thanks for Using Sharks
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-1">
+						<h1>Useful Links</h1>
+						<p>Privacy Policy</p>
+						<p>Terms of Use</p>
+						<p>Return Policy</p>
+						<p>Discount Coupons</p>
+					</div>
+					<div class="col-1">
+						<h1>Company</h1>
+						<p>About Us</p>
+						<p>Contact Us</p>
+						<p>Career</p>
+						<p>Affilate</p>
+                    </div>
+					<div class="col-1">
+						<h1>Follow Us On</h1>
+						<p><i class="fa fa-facebook-official"></i>Facebook</p>
+						<p><i class="fa fa-youtube-play"></i>Youtube</p>
+						<p><i class="fa fa-linkedin"></i>Linkedin</p>
+						<p><i class="fa fa-twitter"></i>Twitter</p>	
+					</div>
+					<div class="col-1 footer-image">
+						<h1>Download App</h1>
+						<p>
+							<a href="https://play.google.com/store/apps?hl=en_IN"><i class="fa fa-play"></i></a>
+						</p>
+						<p>
+							<a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple"></i></a>
+						</p>
+					</div>
+				</div>
+				<hr>
+				<p><center>
+					<i class="fa fa-copyright"></i> 2020 Sharks Co.
+				</center></p>					
+				</div>
+				<hr>
+		</div>
+	</div>
+    </section>
+</body>
+</html>
