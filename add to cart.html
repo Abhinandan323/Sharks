@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+ <link rel="stylesheet" type="text/css" href="C:/Users/abhis/Desktop/Project/Circle One.css">
+ 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<style>
+/*----------------------------navigation bar----------------------------------*/
+
+
+.nav_bar{
+	width:100%;
+	height:50px;
+	background-color: palevioletred;
+	top: 0px;
+	border-bottom: 3px solid grey;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+#logo{
+	height:46px;
+	opacity:1;
+	margin-left: 10px
+}
+.search_box{
+	display: inline-flex;
+	width: 60%;
+}
+#search{
+	width: 40%;
+	height:35px;
+	border-radius:25px; 
+	margin-top:7px;
+	margin-left:30px;
+	border:1px solid grey !important;
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+	border-top-right-radius:0 !important;
+	border-bottom-right-radius: 0 !important;
+	box-shadow: none !important;
+	/*display: inline-flex !important;*/
+}
+.input-group-text
+{
+	
+	background: lavender !important;
+	border:1px solid grey !important;
+	margin:7px 10px 10px 0 !important;
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-top-right-radius:20px !important;
+	border-bottom-right-radius: 20px !important;
+	box-shadow: none !important;
+	cursor: pointer;
+	height: 35px;
+}
+.menu-bar{
+	width:350px;
+	height: 57px;
+	float: right;
+	
+}
+.menu-bar ul{
+	display: inline-flex;
+	float: right;
+}
+.menu-bar ul li
+{
+	border-left: 2px solid black;
+	list-style-type: none;
+	padding: 10px 20px;
+	height: 46px;
+	text-align: center;
+	background: palevioletred;
+	cursor: pointer; 
+}
+.menu-bar ul li a
+{
+	font-size: 16px;
+	font-weight: bold;
+	color:  lavenderblush ;
+	text-decoration: none;
+}
+.fa-shopping-cart
+{
+	margin-right: 5px;
+}
+.s{
+	margin-left: 180px;
+	font-size: 35px;
+	color: white;
+	font-family: fantasy;
+	letter-spacing: 6px;
+	text-shadow: 2px 5px black;
+}
+
+
+h2{
+    color: white;
+        background-color: palevioletred;
+    }
+    h3{
+        background-color: palevioletred;
+    }
+    table{ 
+        background-color: antiquewhite;
+        border: 2px solid palevioletred;
+    }
+    th{
+        border:2px solid palevioletred
+    }
+
+
+
+    
+.footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+.thk{ text-align: center;
+	font-size: 50px;
+	color: palevioletred;
+	text-shadow: 2px 2px grey;
+}
+.footer{
+	/*margin-top: 50%;*/
+	background-color: black;
+	color: white;
+	/*text-align: center;*/
+    padding:25px 0px; 
+	overflow: hidden;
+	background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.footer h1{
+	font-size: 15px;
+	margin: 25px 0px;
+}
+.footer p{
+	font-size: 12px;
+}
+
+hr
+{
+	margin-top:10px;
+	background-color: black;
+}
+
+.footer .row .fa
+{
+	padding-right: 20px;
+	font-size:15px;
+}
+.footer-image img{
+	width:150px;
+}
+div .row:nth-child(1){
+  width: 300%;
+}
+p:hover{
+	color: palevioletred;
+}
+
+button{
+    width: 100%;
+    background-color: palevioletred;
+}
+</style>
+
+<body>
+    <div class="nav_bar">
+		<div class="search_box">
+			<a href="homepage.html"><image src="https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif" id="logo"></image></a>
+			<p class="s">
+				SHARKS
+			</p>
+		</div>
+	</div>
+<div class="container padding-64 black  xxlarge bg7"  id="about">
+<div class=" content"> 
+ 
+   <div id="alerts"></div>
+
+<div class="productcont">
+  <h2 align="center">Iphone </h2>
+  <table style="width: 100%">
+    <th><div class="product">
+           <h3 class="productname">Iphone X(64gb)</h3>
+
+            <p class="price">₹39990.00</p>
+            <button class="addtocart button hover-red">Add To Cart</button>
+        </div></th>
+    <th><div class="product">
+            <h3 class="productname">Iphone 11(64gb)</h3>
+
+            <p class="price">₹68000.00</p>
+            <button class="addtocart button hover-red">Add To Cart</button>
+        </div></th>
+    <th><div class="product">
+            <h3 class="productname">Iphone 11pro(64gb)</h3>
+
+            <p class="price">₹106600.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+         <th> <div class="product">
+            <h3 class="productname">Iphone 8(256gb)</h3>
+            
+            <p class="price"> ₹52990.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+
+  </table>
+
+  <br><br>
+  <h2 align="center">Mask</h2>
+  <table style="width: 100%">
+    <th> <div class="product">
+            <h3 class="productname">Mask N95</h3>
+            
+            <p class="price"> ₹799.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+    <th> <div class="product">
+            <h3 class="productname">W95 Mask</h3>
+            
+            <p class="price">₹600.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+    <th><div class="product">
+            <h3 class="productname">Mask With Air Lock</h3>
+
+            <p class="price">₹499.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+         <th> <div class="product">
+            <h3 class="productname">S95 Mask</h3>
+            
+            <p class="price"> ₹747.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+
+  </table>
+
+
+  <br><br>
+  <h2 align="center">Speaker</h2>
+  <table style="width: 100%">
+     <th> <div class="product">
+            <h3 class="productname">Echo Dot</h3>
+            
+            <p class="price"> ₹3499.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+    <th> <div class="product">
+            <h3 class="productname">Boat Stone</h3>
+            
+            <p class="price"> ₹999.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+    <th> <div class="product">
+            <h3 class="productname">Gold Tech</h3>
+            
+            <p class="price">₹449.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+    <th><div class="product">
+            <h3 class="productname">JbL Infinity</h3>
+
+            <p class="price">₹799.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+         <th> <div class="product">
+            <h3 class="productname">Quantum 2.0</h3>
+            
+            <p class="price"> ₹449.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+  </table>
+  <br><br>
+<div class="productcont">
+    <h2 align="center">Watches</h2>
+    <table style="width: 100%">
+      <th><div class="product">
+             <h3 class="productname">Mobado ultra slim</h3>
+  
+              <p class="price">₹63245.00</p>
+              <button class="addtocart button hover-red">Add To Cart</button>
+          </div></th>
+      <th><div class="product">
+              <h3 class="productname">Real me Watch</h3>
+  
+              <p class="price">₹3999.00</p>
+              <button class="addtocart button hover-red">Add To Cart</button>
+          </div></th>
+      <th><div class="product">
+              <h3 class="productname">Oppo Watch</h3>
+  
+              <p class="price">₹19990.00</p>
+              <button class="addtocart  button hover-red">Add To Cart</button>
+          </div></th>
+           <th> <div class="product">
+              <h3 class="productname">Puma Smart watch</h3>
+              
+              <p class="price"> ₹19995.00</p>
+              <button class="addtocart  button hover-red">Add To Cart</button>
+          </div></th>
+      <th> <div class="product">
+              <h3 class="productname">Fossil hybrif hr</h3>
+              
+              <p class="price">₹14995.00</p>
+              <button class="addtocart  button hover-red">Add To Cart</button>
+          </div></th>
+    </table>
+    <br><br>
+  <h2 align="center">Camera</h2>
+  <table style="width: 100%">
+    <th> <div class="product">
+            <h3 class="productname">Nikon Z5</h3>
+            
+            <p class="price"> ₹113995.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+    <th> <div class="product">
+            <h3 class="productname">Canon Eosr6</h3>
+            
+            <p class="price">₹215995.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+    <th><div class="product">
+            <h3 class="productname">Sony A6600</h3>
+
+            <p class="price">₹117990.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+         <th> <div class="product">
+            <h3 class="productname">Canon EOS 1200D18Mp DSLR</h3>
+            
+            <p class="price"> ₹26500.00</p>
+            <button class="addtocart  button hover-red">Add To Cart</button>
+        </div></th>
+   
+  </table>
+  <br><br>
+       
+        <br><br><br>
+        </div>
+        <div class="cart-container">
+          <fieldset>
+          <h2>Cart</h2>
+          <table>
+            <thead>
+              <tr>
+              <th style="background-color: white;border: 0px;"><strong>&nbsp;&nbsp;&nbsp;Product&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></th>
+              <th  style="background-color: white;border: 0px;"><strong>Price</strong></th>
+            </tr>
+            </thead>
+            <tbody id="carttable">
+            </tbody>
+          </table>
+          <hr>
+          <table id="carttotals">
+            <tr>
+              <td style="background-color: white;border: 0px;"><strong>Items</strong></td>
+              <td style="background-color: white;border: 0px;"><strong>Total</strong></td>
+            </tr>
+            <tr>
+              <td>x <span id="itemsquantity">0</span></td>
+             
+              <td>₹<span id="total">0</span></td>
+            </tr></table>
+<br>
+            
+          <div class="cart-buttons">
+          <table style="width: 100%;border: 2px solid white;">
+            <th style="background-color: white;border: 0px;">
+                <button class="button hover-red" id="emptycart">Empty Cart</button></th>
+            <th style="background-color: white;border: 0px;">
+                <a href="payment.html" target="_blank"><button class="button hover-red" id="checkout">Checkout</button></a></th>
+          </table>    
+          </div>
+        </div>
+        </fieldset>
+</div>
+</div>
+<br><br><br>
+<script type="text/javascript">
+  
+  /* get cart total from session on load */
+updateCartTotal();
+
+/* button event listeners */
+document.getElementById("emptycart").addEventListener("click", emptyCart);
+var btns = document.getElementsByClassName('addtocart');
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function() {addToCart(this);});
+}
+
+/* ADD TO CART functions */
+
+function addToCart(elem) {
+    //init
+    var sibs = [];
+    var getprice;
+    var getproductName;
+    var cart = [];
+     var stringCart;
+    //cycles siblings for product info near the add button
+    while(elem = elem.previousSibling) {
+        if (elem.nodeType === 3) continue; // text node
+        if(elem.className == "price"){
+            getprice = elem.innerText;
+        }
+        if (elem.className == "productname") {
+            getproductName = elem.innerText;
+        }
+        sibs.push(elem);
+    }
+    //create product object
+    var product = {
+        productname : getproductName,
+        price : getprice
+    };
+    //convert product data to JSON for storage
+    var stringProduct = JSON.stringify(product);
+    /*send product data to session storage */
+    
+    if(!sessionStorage.getItem('cart')){
+        //append product JSON object to cart array
+        cart.push(stringProduct);
+        //cart to JSON
+        stringCart = JSON.stringify(cart);
+        //create session storage cart item
+        sessionStorage.setItem('cart', stringCart);
+        addedToCart(getproductName);
+        updateCartTotal();
+    }
+    else {
+        //get existing cart data from storage and convert back into array
+       cart = JSON.parse(sessionStorage.getItem('cart'));
+        //append new product JSON object
+        cart.push(stringProduct);
+        //cart back to JSON
+        stringCart = JSON.stringify(cart);
+        //overwrite cart data in sessionstorage 
+        sessionStorage.setItem('cart', stringCart);
+        addedToCart(getproductName);
+        updateCartTotal();
+    }
+}
+/* Calculate Cart Total */
+function updateCartTotal(){
+    //init
+    var total = 0;
+    var price = 0;
+    var items = 0;
+    var productname = "";
+    var carttable = "";
+    if(sessionStorage.getItem('cart')) {
+        //get cart data & parse to array
+        var cart = JSON.parse(sessionStorage.getItem('cart'));
+        //get no of items in cart 
+        items = cart.length;
+        //loop over cart array
+        for (var i = 0; i < items; i++){
+            //convert each JSON product in array back into object
+            var x = JSON.parse(cart[i]);
+            //get property value of price
+            price = parseFloat(x.price.split('₹')[1]);
+            productname = x.productname;
+            //add price to total
+            carttable += "<tr><td>" + productname + "</td><td>₹" + price.toFixed(2) + "</td></tr>";
+            total += price;
+        }
+        
+    }
+    //update total on website HTML
+    document.getElementById("total").innerHTML = total.toFixed(2);
+    //insert saved products to cart table
+    document.getElementById("carttable").innerHTML = carttable;
+    //update items in cart on website HTML
+    document.getElementById("itemsquantity").innerHTML = items;
+}
+//user feedback on successful add
+function addedToCart(pname) {
+  var message = pname + " was added to the cart";
+  var alerts = document.getElementById("alerts");
+  alerts.innerHTML = message;
+  if(!alerts.classList.contains("message")){
+     alerts.classList.add("message");
+  }
+}
+/* User Manually empty cart */
+function emptyCart() {
+    //remove cart session storage object & refresh cart totals
+    if(sessionStorage.getItem('cart')){
+        sessionStorage.removeItem('cart');
+        updateCartTotal();
+      //clear message and remove class style
+      var alerts = document.getElementById("alerts");
+      alerts.innerHTML = "";
+      if(alerts.classList.contains("message")){
+          alerts.classList.remove("message");
+      }
+    }
+}
+</script>
+
+<div class="footer">
+    <div class="thk">
+        Thanks for Using Sharks
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <h1>Useful Links</h1>
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+                <p>Return Policy</p>
+                <p>Discount Coupons</p>
+            </div>
+            <div class="col-1">
+                <h1>Company</h1>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Career</p>
+                <p>Affilate</p>
+            </div>
+            <div class="col-1">
+                <h1>Follow Us On</h1>
+                <p><a href="https://www.facebook.com/sharks.sharks.758399?__tn__=%2CdC-R-R&eid=ARAohRS8Bgunmw1l2Xy5U5qP-cihwpG8oK_Tlqytx9i0Dw-NoIJvly4qP45FeVZypwecqmEUJsWhtN26&hc_ref=ARRyKGYkYWo8etzqVyF517mEWgD0IxokmamIprAzsgGutb9gVRtRgLFEiMYvvO_pCps&fref=nf"><i class="fa fa-facebook-official"></i>Facebook</a></p>
+                <p><a href="https://www.youtube.com/channel/UClEHKLfW-gH417GLsm8q8Dg"><i class="fa fa-youtube-play"></i>Youtube</a></p>
+                <p><a href="https://www.instagram.com/sharks.india/"><i class="fa fa-instagram"></i>Instagram</a></p>
+                <p><a href="https://twitter.com/Sharksco4"><i class="fa fa-twitter"></i>Twitter</a></p>	
+            </div>
+            <div class="col-1 footer-image">
+                <h1>Download App</h1>
+                <p>
+                    <a href="https://play.google.com/store/apps?hl=en_IN"><i class="fa fa-play"></i></a>
+                </p>
+                <p>
+                    <a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple"></i></a>
+                </p>
+            </div>
+        </div>
+        <hr>
+        <p><center>
+            <i class="fa fa-copyright"></i> 2020 Sharks Co.
+        </center></p>
+</div>
+</div>
+</body>
+</html>
