@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <title> Beautiful Billo</title>
+
+    
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+          body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=button] {
+  background-color: #f8aa02;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+        label{
+            color: #f8aa02;
+        }
+input[type=submit]:hover {
+  background-color: #f08902;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: black;
+      background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+	        background-repeat: no-repeat;
+	        background-position: center;
+  padding: 20px;
+}
+        a:hover{
+            color:#f08902;
+        }
+
+        body{
+            background-color: black;
+        }
+
+
+        /*navigation bar*/
+
+        .nav_bar{
+	    width:100%;
+	    height:50px;
+	    background-color: #f8aa02;
+	    top: 0px;
+	    border-bottom: 3px solid grey;
+        }
+
+        #logo{
+	        height:46px;
+	        opacity:1;
+	        margin-left: 10px;
+        }
+
+        .search_box{
+	        display: inline-flex;
+	        width: 60%;
+        }
+
+        #search{
+	        width: 40%;
+	        height:35px;
+	        border-radius:25px; 
+	        margin-top:7px;
+	        margin-left:30px;
+	        border:1px solid grey !important;
+	        border-top-left-radius: 20px !important;
+	        border-bottom-left-radius: 20px !important;
+	        border-top-right-radius:0 !important;
+	        border-bottom-right-radius: 0 !important;
+	        box-shadow: none !important;
+	        /*display: inline-flex !important;*/
+        }
+
+        .input-group-text{
+	        background: lavender !important;
+	        border:1px solid grey !important;
+	        margin:7px 10px 10px 0 !important;
+	        border-top-left-radius: 0 !important;
+	        border-bottom-left-radius: 0 !important;
+	        border-top-right-radius:20px !important;
+	        border-bottom-right-radius: 20px !important;
+	        box-shadow: none !important;
+	        cursor: pointer;
+	        height: 35px;
+        }
+
+        .menu-bar{
+	        width:350px;
+	        height: 57px;
+	        float: right;
+        }
+
+        .menu-bar ul{
+	        display: inline-flex;
+	        float: right;
+        }
+
+        .menu-bar ul li{
+        	border-left: 2px solid black;
+	        list-style-type: none;
+	        padding: 10px 20px;
+	        height: 46px;
+	        text-align: center;
+	        background: #f8aa02;
+	        cursor: pointer; 
+        }
+
+        .menu-bar ul li a{
+        	font-size: 16px;
+	        font-weight: bold;
+	        color:  lavenderblush ;
+	        text-decoration: none;
+        }
+
+        .fa-shopping-cart{
+	        margin-right: 5px;
+        }
+
+        .s{
+	        margin-left: 180px;
+	        font-size: 35px;
+	        color: white;
+	        font-family: fantasy;
+	        letter-spacing: 6px;
+	        text-shadow: 2px 5px black;
+        }
+
+
+        /*body*/
+
+        .hed{
+            background-color: #f8aa02;
+            height: 60px;
+            color: white;
+            text-shadow: 2px 2px black;
+        }
+
+        .hed p{
+            font-size: 51px;
+        }
+
+        .des{ 
+            text-shadow: 2px 2px black;
+            color: #f8aa02;
+            font-size: 18px;
+            padding-left: 50px;
+        }
+
+        .button{
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: #f8aa02;
+        }
+
+        .button:hover{
+            background-color: black;
+            color: #f8aa02;
+        }
+
+
+        /*more*/
+
+        .mor{
+            background-color: rgb(48, 48, 48);
+            border-bottom: 10px solid #f08902;
+            
+        }
+
+        .mor h3{
+            width: 110px;
+            color: #f08902;
+            border-left: 5px solid #f08902;
+            background-color: black;
+        }
+
+        .mor img{
+            border: 2px solid #f08902;
+            border-radius: 5px;
+            height: 160px;
+            width: 190px;
+            margin-right: 50px;
+        }
+
+
+        /*feedback*/
+
+        
+
+        /* Footer */
+
+        .thk{ 
+            text-align: center;
+	        font-size: 50px;
+	        color: white;
+	        text-shadow: 2px 2px #f8aa02;
+        }
+
+        .footer{
+	        /*margin-top: 50%;*/
+	        background-color: black;
+	        color: white;
+	        /*text-align: center;*/
+            padding:25px 0px; 
+	        overflow: hidden;
+	        background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+	        background-repeat: no-repeat;
+	        background-position: center;
+        }
+
+        .footer h1{
+	        font-size: 15px;
+	        margin: 25px 0px;
+        }
+
+        .footer p{
+	        font-size: 12px;
+        }
+
+        hr{
+	        margin-top:10px;
+	        background-color: white;
+        }
+
+        .footer .row .fa{
+	        padding-right: 20px;
+	        font-size:15px;
+        }
+
+        .footer-image img{
+	        width:150px;
+        }
+
+        .row{
+            width: 350%;
+        }
+
+        p:hover{
+	        color: #f8aa02;
+        }
+
+    </style>
+
+    <body>
+
+        <!----Navigation bar-->
+        <div class="nav_bar">
+            <div class="search_box">
+                <image src="https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif" id="logo"></image>
+    
+                <a class="s" href="">
+                    SHARKS MUSIC
+                </a>
+            </div>
+            
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a href="#">Downloads</a></li>
+                    <li><a href=""><i class="material-icons"> person</i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Slideshow-->
+        <div>
+            <br><br><br>
+            <center>
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"> <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1iiy4u" width="100%" height="100%" allowfullscreen > </iframe> </div>
+            <br><br><br>
+            </center>
+        </div>
+
+        <!--Name and discripton-->
+        <div style="border-bottom: 10px solid #f08902;">
+            <div class="hed">
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beautiful Billo</p>
+            </div>
+            <div class="des"><table border="1" cellpadding="10" cellspacing="10" class="nameanddes">
+                        <tr>
+                            <td rowspan="5" width="50%"><center><span class="lyrics">Beautiful Billo</span><center>
+                                <pre style="color:#f8aa02">
+            
+                                    O Beautiful Billo,
+                                    Nakhra Tera 65 Killo,
+                                    Kite Kadd K Ji Time Gariba Nu V Mil Lo,
+                                    O Beautiful Billo,
+                                    Nakhra Tera 65 Killo,
+                                    Kite Kadd K Ji Time Gariba Nu V Mil Lo,
+                                    Gall Ban Ni Ni Taunt Maarda Mera Yaar Dhillon
+                
+                Artist: Diljit Dosanjh
+                Movie: Disco Singh
+                Quality: HD
+                Released: 2014
+                Runtime: 3.35
+
+            <a href="https://www.lyricshunt.in/2014/03/beautiful-billo-song-lyrics-disco-singh.html">Read Full Lyrics</a>
+                                </pre>
+                            </td>
+                            <td>1.Gaal Ni Kadni - Parmish Verma</td>
+                            <tr>
+                            <td>2. Aam Jahe Munde - Parmish Verma</td>
+                            </tr>
+                            <tr>
+                            <td>3. Beautiful Billo - Diljit Dosanjh</td>
+                            </tr>
+                            <tr>
+                            <td>4. Putt Jatt Da - Diljit Dosanjh</td>
+                            </tr>
+                            <tr>
+                            <td>5. 4 Peg Renamed 4 Yaar - Parmish Verma</td>
+                            </tr>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+                
+     
+
+                
+                <center> 
+                    <a href="https://tinyjuke.best/2014/03/beautiful-billo-disco-singh-3gp-mp4.html">
+                        <button  class="button" type="button">
+                            Download
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button  class="button" type="button">
+                            Watch
+                        </button>
+                    </a>
+                </center>
+            </div>
+        </div>
+
+        <!--more items page-->
+        <div class="mor">
+            <br>
+            <h3>  &nbsp;&nbsp;More :-</h3>
+            <marquee>
+                <a href="muchh.html">
+                    <img src="https://static.toiimg.com/photo/msid-70783545/70783545.jpg">
+                </a>
+                <a href="gaal.html">
+                    <img src="https://i.ytimg.com/vi/E47je-CeqkU/maxresdefault.jpg">
+                </a>
+                <a href="goat.html">
+                    <img src="https://static.toiimg.com/photo/msid-77212554/77212554.jpg">
+                </a>
+                <a href="chirri.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7V8gS4_qweoQqR68zIr4HjHnRCSlnqd_GdA&usqp=CAU">
+                </a>
+                <a href="pagg.html">
+                    <img src="https://www.newbornbabystuff.com/wp-content/uploads/2017/03/pagg-wala-munda-ambarsariya-diljit-dosanjh-navneet-monica-lauren-i-latest.jpg">
+                </a>
+                <a href="shada.html">
+                    <img src="https://www.infonfacts.com/wp-content/uploads/2018/03/shada-parmish-verma-video-download_89617-990x557.jpg">
+                </a>
+            </marquee>
+            <br><br>
+        
+        </div>
+
+        <!--Feedback form-->
+        <div style="height: inherit;">
+<h3 style="color:royalblue;text-align: center">Feedback Form</h3>
+                <center><form >
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<br>
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+<br>
+    <label for="country">Country</label>
+<br>    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+                     <option value="india">INDIA</option>
+    </select>
+<br>
+    <label for="subject">Enter Your Feedback</label>
+   <br> <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;width: 300px;"></textarea>
+<br>
+    <input type="button" value="Submit" onclick="feed()">
+                    <p id="out" style="color:#f08902;"></p>
+                    </form></center>
+        </div>
+<script>
+    function feed(){
+        document.getElementById("out").innerHTML="Submitted Successfully";
+    }
+        </script>
+        <!--footer-->
+        <div class="footer">
+            <div class="thk">
+                Thanks for Using Sharks
+            </div>
+            <div class="container" >
+                <div class="row">
+                    <div class="col-1">
+                        <h1>Useful Links</h1>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Use</p>
+                        <p>Return Policy</p>
+                        <p>Discount Coupons</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Company</h1>
+                        <p>About Us</p>
+                        <p>Contact Us</p>
+                        <p>Career</p>
+                        <p>Affilate</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Follow Us On</h1>
+                        <p><i class="fa fa-facebook-official"></i>Facebook</p>
+                        <p><i class="fa fa-youtube-play"></i>Youtube</p>
+                        <p><i class="fa fa-linkedin"></i>Linkedin</p>
+                        <p><i class="fa fa-twitter"></i>Twitter</p>	
+                    </div>
+                    <div class="col-1 footer-image">
+                        <h1>Download App</h1>
+                        <p>
+                            <a href="https://play.google.com/store/apps?hl=en_IN"><i class="fa fa-play"></i></a>
+                        </p>
+                        <p>
+                            <a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple"></i></a>
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <p><center>
+                    <i class="fa fa-copyright"></i> 2020 Sharks Co.
+                </center></p>
+        </div>
+    </div>
+    </body>
+</html>
