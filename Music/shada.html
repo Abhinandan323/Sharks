@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<title>Shada</title>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        
+        
+    /**********************************navigation bar**********************************************/
+        
+        .nav_bar{
+            width:100%;
+            height:50px;
+            background-color: #123C69;
+            top: 0px;
+            border-bottom: 3px solid grey;
+        }
+        
+        #logo{
+            height:46px;
+            opacity:1;
+            margin-left: 10px;
+        }
+        
+        .search_box{
+            display: inline-flex;
+            width: 60%;
+        }
+        
+        #search{
+            width: 40%;
+            height:35px;
+            border-radius:25px; 
+            margin-top:7px;
+            margin-left:30px;
+            border:1px solid grey !important;
+            border-top-left-radius: 20px !important;
+            border-bottom-left-radius: 20px !important;
+            border-top-right-radius:0 !important;
+            border-bottom-right-radius: 0 !important;
+            box-shadow: none !important;
+            /*display: inline-flex !important;*/
+        }
+        
+        .input-group-text{
+            background: white !important;
+            border:1px solid grey !important;
+            margin:7px 10px 10px 0 !important;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+            border-top-right-radius:20px !important;
+            border-bottom-right-radius: 20px !important;
+            box-shadow: none !important;
+            cursor: pointer;
+            height: 35px;
+        }
+        
+        .menu-bar{
+            width:350px;
+            height: 57px;
+            float: right;
+        }
+        
+        .menu-bar ul{
+            display: inline-flex;
+            float: right;
+        }
+        
+        .menu-bar ul li{
+            border-left: 2px solid black;
+            list-style-type: none;
+            padding: 10px 20px;
+            height: 46px;
+            text-align: center;
+            background: #123C69;
+            cursor: pointer; 
+        }
+        
+        .menu-bar ul li a{
+            font-size: 16px;
+            font-weight: bold;
+            color:  lavenderblush ;
+            text-decoration: none;
+        }
+        
+        .fa-shopping-cart{
+            margin-right: 5px;
+        }
+        
+        .s{
+            margin-left: 180px;
+            font-size: 32px;
+            color: lavenderblush;
+            font-family: fantasy;
+            letter-spacing: 6px;
+            text-shadow: 2px 5px 1px black;
+        }
+        
+        
+    /*---------------------------body-------------------------------*/
+        
+        .hed{
+            background-color: #123C69;
+            height: 8px;
+        }
+                
+        .des{ 
+            color: orangered;
+            font-size: 18px;
+            padding: 50px;
+        }
+        
+        .button{
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: orangered;
+        }
+        
+        .button:hover{
+            background-color: black;
+            color: orangered;
+        }
+        
+        .nameanddes{
+            width:100%;
+            border: 3px solid orange;
+            background-color: #ffef96;
+            border-left: 5px solid #feda14;
+            color: #191970;
+        }
+        
+        pre{
+            color: black;
+            text-align: left;
+        }
+
+        a{
+            color: orangered;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .lyrics{
+            font-size: 30px;
+        }
+
+        .heading{
+            border: none;
+        }
+
+        .top{
+            margin: auto;
+            font-size: 25px;
+        }
+        
+    /*--------------------------------more----------------------------------------*/
+        
+        .mor{
+            background-color: #ffef96;
+            border-bottom: 8px solid #123C69;
+        }
+        
+        .mor h3{
+            width: 110px;
+            color: lavenderblush;
+            border-left: 5px solid orangered;
+            background-color: #123C69;
+        }
+        
+        .mor img{
+            border: 2px solid #191970;
+            border-radius: 5px;
+            height: 160px;
+            width: 190px;
+            margin-left: 50px;
+        }
+        
+        #feed{
+            width: 30%;
+        }
+        
+        .feedback{
+            width: 100%;
+        }
+
+        h4{
+            font-size: 45px;
+            font-family: fantasy;
+            letter-spacing: 3px;
+        }
+
+        label{
+            font-size: 25px;
+        }
+    /*------------------------------------feedback---------------------------------*/
+        
+        
+        
+    /*---------------------------------- Footer----------------------------------- */
+        
+        .thk{ 
+            text-align: center;
+            font-size: 50px;
+            color: lavenderblush;
+            text-shadow: 2px 2px 2px #123C69;
+        }
+        
+        .footer{
+            /*margin-top: 50%;*/
+            background-color: black;
+            color: white;
+            /*text-align: center;*/
+            padding:25px 0px; 
+            overflow: hidden;
+            background-image: url("https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        .footer h1{
+            font-size: 15px;
+            margin: 25px 0px;
+        }
+        
+        .footer p{
+            font-size: 12px;
+        }
+        
+        hr{
+            margin-top:10px;
+            background-color: white;
+        }
+        
+        .footer .row .fa{
+            padding-right: 20px;
+            font-size:15px;
+        }
+        
+        .footer-image img{
+            width:150px;
+        }
+        
+        .row{
+            width: 350%;
+        }
+        
+        p:hover{
+            color: rgb(42,134,240);
+        }
+                
+        button{
+            background-color: #123C69;
+            border:none;
+            color: lavenderblush;
+        }
+        
+        /*--------------------------------------signup login --------------------------------*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box;}
+        
+        
+        /*----------------- Full-width input fields-------- */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+        
+        /* Add a background color when the inputs get focus */
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        /* Set a style for all buttons */
+        .signupbtn,.cancelbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        button:hover {
+            opacity:1;
+        }
+        
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+        
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+        }
+        
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+        
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: -50px;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: hidden; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 20px;
+        }
+        
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+        
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            margin-left: 1150px;
+            margin-top: 1px;
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #f44336;
+            cursor: pointer;
+        }
+        
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .cancelbtn, .signupbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-----------------------------------------------Navigation bar------------------------------------------------------------>
+        <div class="nav_bar">
+            <div class="search_box">
+                <image src="https://media.giphy.com/media/gKxxrUHEXFjzTWiPBd/giphy.gif" id="logo">
+                <a class="s" href="">
+                    SHARKS ENT.
+                </a>
+            </div>
+            
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a href="#">Downloads</a></li>
+                    
+                    <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="material-icons"> person</i></button></li>
+                    <li><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><i class="material-icons"> person</i></button></li>
+                </ul>
+            </div>
+        </div>
+    
+    <!-------------------------------------------------Slideshow-------------------------------------------------------------->
+        <div width="80%" class="heading">
+            <br>
+            <table class="top" width="60%" cellspacing="10" cellpadding="10">
+                <tr>
+                    <td width="50%" style="text-align: right;"><img src="https://a10.gaanacdn.com/images/albums/69/2090569/crop_480x480_1521440108_2090569.jpg" height="300" width="300"></td>
+                    <td>
+                        Album : Do Gabru
+                        <br>
+                        Artist : Parmish Verma
+                        <br>
+                        Music : Desi Crew 
+                        <br>
+                        Label : Speed Records
+                        <br>
+                        Category : Single Track</td>
+                </tr>
+            </table>
+        </div>
+        
+                
+    <!--------------------------------------------------------Name and discripton----------------------------------------------->
+        <div style="border-bottom: 8px solid #123C69;">
+            <div class="hed"></div>
+                <div class="des">
+                    <table border="1" cellpadding="10" cellspacing="10" class="nameanddes">
+                        <tr>
+                            <td rowspan="5" width="50%"><center><span class="lyrics">Shada</span><center>
+                                <pre>
+            
+                    Ho chhade rehke dekho
+                    Bhai nazaara aunda bada
+                    Taur naal shada munda
+                    Taur naal shada
+                    Taur naal shada rehnda
+                    Taur naal shada (x2)
+                    Unjh taan smile’a deke langan batheriyan
+                    Saathon nahio lagdi aan faltu ch gediyan
+                                    
+                                    
+            <a href="https://www.lyricsmint.com/parmish-verma/shada">Read Full Lyrics</a>
+            <audio src="Shada - Parmish Verma (DjPunjab.Com).mp3" controls></audio>
+            <div class="btn"><a href="https://djpunjab.fm/single-track/shada-parmish-verma-mp3-song-287163.html#gsc.tab=0">
+                                </pre>
+                            </td>
+                            <td>1. Old Skool - Prem Dhillon, Naseeb & Sidhu Moosewala</td>
+                            <tr>
+                            <td>2. Hosh - Nikk</td>
+                            </tr>
+                            <tr>
+                            <td>3. Jaan Niasar - Arijit Singh</td>
+                            </tr>
+                            <tr>
+                            <td>4. Ek Tarfa Pyar - Darshan Raval</td>
+                            </tr>
+                            <tr>
+                            <td>5. Rockstar - Post Malone</td>
+                            </tr>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+        
+    <!--------------------------------------more items page------------------------------------------------------------>
+        <div class="mor">
+            <br>
+            <h3>&nbsp;&nbsp;More :-</h3>
+
+            <a href="">
+                <img src="https://likegana.com/siteuploads/thumb/c/354_4.jpg">
+            </a>
+            <a href="">
+                <img src="https://i.pinimg.com/474x/99/5f/87/995f87bb8ac6d3b8ca0d03f2b3fd85ed.jpg">
+            </a>
+            <a href="">
+                <img src="https://i.pinimg.com/originals/9e/4e/20/9e4e206ee648c48a020c4e82a211d83f.jpg">
+            </a>
+            <a href="">
+                <img src="https://i.pinimg.com/236x/97/4f/9e/974f9e6d57a76b17c9cd7bfdd7fb1ae3.jpg">
+            </a>
+            <a href="">
+                <img src="https://i.ytimg.com/vi/AlTvzPKNZU0/hqdefault.jpg">
+            </a>
+            <a href="">
+                <img src="https://balamp3.in/siteuploads/thumb/c/250_4.jpg">
+            </a>
+
+            <br><br>
+        </div>
+        
+    <!------------------------------------------Feedback form--------------------------------------------------->
+        <div style="width: 100%; border-bottom: 8px solid #123C69">
+            <div class="feedback text-center">
+                <h4>FEEDBACK FORM:</h4><br>
+                <label for="feed">FEEDBACK:-</label>
+                <input type="text" id="feed"  name="feed">
+                <a href=""><button  class="button" type="button">SUBMIT</button> </a><br>
+                </h4>
+            </div>
+        </div>
+        
+    <!----------------------------------------footer----------------------------------------------------->
+        <div class="footer">
+            <div class="thk">
+                Thanks for Using Sharks
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <h1>Useful Links</h1>
+                        <p>Privacy Policy</p>
+                        <p>Terms of Use</p>
+                        <p>Return Policy</p>
+                        <p>Discount Coupons</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Company</h1>
+                        <p>About Us</p>
+                        <p>Contact Us</p>
+                        <p>Career</p>
+                        <p>Affilate</p>
+                    </div>
+                    <div class="col-1">
+                        <h1>Follow Us On</h1>
+                        <p><i class="fa fa-facebook-official"></i>Facebook</p>
+                        <p><i class="fa fa-youtube-play"></i>Youtube</p>
+                        <p><i class="fa fa-linkedin"></i>Linkedin</p>
+                        <p><i class="fa fa-twitter"></i>Twitter</p>	
+                    </div>
+                    <div class="col-1 footer-image">
+                        <h1>Download App</h1>
+                            <p>
+                                <a href="https://play.google.com/store/apps?hl=en_IN"><i class="fa fa-play"></i></a>
+                            </p>
+                            <p>
+                                <a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple"></i></a>
+                            </p>
+                    </div>
+                    </div>
+                        <hr>
+                        <p>
+                        <center>
+                            <i class="fa fa-copyright"></i> 2020 Sharks Co.
+                        </center>
+                        </p>
+            </div>
+        </div>
+</body>
+</html>
